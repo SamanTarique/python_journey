@@ -1,0 +1,5 @@
+2025-09-23 12:30:30 - DEBUG - This is a debug log
+2025-09-23 12:30:30 - INFO - This is a info log
+2025-09-23 12:30:30 - WARNING - This is a warning log
+2025-09-23 12:30:30 - ERROR - This is a error log
+2025-09-23 12:30:30 - CRITICAL - This is a critical log

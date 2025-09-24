@@ -1,0 +1,189 @@
+# 📌 PEP, Lexing & Parsing, Virtual Environments, pyenv
+
+---
+
+## 🔹 PEP (Python Enhancement Proposal)
+
+- **Definition**: Documents that describe new features, improvements, or conventions for Python.  
+- **PEP 8** → Style guide for Python code.
+
+### PEP 8 Key Rules
+- **Indentation**: 4 spaces per level (❌ never tabs).  
+- **Naming conventions**:  
+  - Variables & functions → `snake_case`  
+  - Classes → `PascalCase`  
+  - Constants → `UPPER_CASE`  
+- **Spacing**:  
+  - Around operators → `a = b + c`  
+  - No spaces inside parentheses → `func(x, y)` ✅ not `func( x, y )`  
+- **Docstring**: String literal as the **first statement** in a module, function, class, or package.  
+- **Line length**:  
+  - Code → 79 chars  
+  - Comments/docstrings → 72 chars  
+
+### Wrapping Long Lines
+- **Preferred**: Implicit joins with `()` `[]` `{}`  
+  ```python
+  query = (
+      "SELECT id, email, created_at "
+      "FROM users "
+      "WHERE is_active = 1 "
+      "ORDER BY created_at DESC "
+      "LIMIT 500"
+  )
+  ```
+
+### Blank Lines
+- 2 blank lines → before/after top-level `def` / `class`  
+- 1 blank line → between class methods (sometimes none if very small/related)  
+- Imports → 3 groups separated by 1 blank line:  
+  1. Standard library  
+  2. Third-party packages  
+  3. Local imports  
+
+### Tools for Enforcement
+- **Formatter**: `black` (default line length 88).  
+- **Linter**: `ruff` (fast, enforces PEP 8 + more, can auto-fix).  
+- **Import sorter**: `ruff` (or `isort`).  
+
+---
+
+## 🔹 Lexing & Parsing
+
+### Lexing (Tokenization)
+- Converts raw source code → **tokens** (smallest meaningful units).  
+- Examples of tokens:  
+  - Keywords → `if`, `for`, `def`  
+  - Identifiers → `x`, `my_list`  
+  - Operators → `+`, `=`, `*`  
+  - Literals → `10`, `"hello"`  
+  - Punctuation → `:`, `,`, `()`  
+
+Example:  
+```python
+x = 10 + 20
+```
+Tokens:  
+`IDENTIFIER(x), OPERATOR(=), NUMBER(10), OPERATOR(+), NUMBER(20)`
+
+---
+
+### Parsing (Syntactic Analysis)
+- Takes tokens → arranges according to grammar → builds **AST** (Abstract Syntax Tree).  
+
+Example AST for `x = 10 + 20`:
+```
+Assignment
+ ├── Variable: x
+ └── Expression (+)
+      ├── Number: 10
+      └── Number: 20
+```
+
+---
+
+### Why Both?
+- **Lexing** → cleans text → tokens.  
+- **Parsing** → arranges tokens into structure → AST.  
+
+### Flow of Execution
+```
+Source code (.py)
+   ↓
+Tokenizer + Parser
+   ↓
+Abstract Syntax Tree (AST)
+   ↓
+Compiler
+   ↓
+Bytecode (.pyc)
+   ↓
+Python Virtual Machine (PVM) executes
+```
+
+---
+
+## 🔹 Virtual Environments
+
+- A **self-contained Python setup** for a project.  
+- Has:  
+  - Its own **Python interpreter (binary)**.  
+  - Its own **site-packages/** (installed libraries).  
+- **Purpose**: Keep dependencies isolated per project (like `node_modules` in JS).  
+- Benefit: Prevents global Python pollution & version conflicts.  
+
+---
+
+## 🔹 pyenv
+
+- **Manages Python interpreters/versions**, not packages.  
+- Example use:  
+  - Install multiple versions: `3.9.20`, `3.10.15`, `3.11.9`  
+  - Set:  
+    - Global version → default system-wide  
+    - Local version → per project (creates `.python-version` file)  
+
+### Install & Setup
+```bash
+curl https://pyenv.run | bash
+```
+Add to `~/.bashrc` or `~/.zshrc`:
+```bash
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+```
+Reload shell.  
+
+### Usage
+```bash
+# List available versions
+pyenv install --list | grep " 3\."
+
+# Install versions
+pyenv install 3.10.14
+pyenv install 3.12.5
+
+# Set global version
+pyenv global 3.12.5
+python --version   # 3.12.5
+
+# Set per-project version
+cd ~/projects/myapp
+pyenv local 3.10.14
+python --version   # 3.10.14
+```
+
+---
+
+## 🔹 Virtual Environment Creation (3 Common Ways)
+
+1. **venv (built-in)**  
+   ```bash
+   python3 -m venv my_env
+   source my_env/bin/activate
+   ```
+
+2. **virtualenv (external)**  
+   ```bash
+   pip install virtualenv
+   virtualenv my_env
+   ```
+
+3. **conda (Anaconda/Miniconda)**  
+   ```bash
+   conda create --name my_env python=3.11
+   conda activate my_env
+   ```
+
+---
+
+## 🔹 Why Use Virtual Envs if pyenv Exists?
+
+- **pyenv** → answers *which Python binary/version to run*.  
+- **virtualenv/venv/conda** → answers *which packages & versions are installed*.  
+
+Example conflict:  
+- Project A → Django 4.2  
+- Project B → Django 5.0  
+
+👉 Even with the same Python version, virtual envs isolate packages so they don’t clash.
