@@ -59,8 +59,13 @@
 
 # *****************************************************
 
-li = [4, 3, 567, 3, 43, 3]
-# t=(1,2,3)
-print(li.sort())
-print(sorted(li, reverse=True))
-print(li)
+# li = [4, 3, 567, 3, 43, 3]
+# # t=(1,2,3)
+# print(li.sort())
+# print(sorted(li, reverse=True))
+# print(li)
+
+
+a = [(2, 4), (7, 9, 65), (4, 3, 5, 7, 8)]
+
+print(sorted(a, key=lambda x: x[1]))

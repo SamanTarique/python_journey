@@ -1,0 +1,3 @@
+Synchronous - 127.972
+Normal Thread - 40.805
+Thread Pool - 19.410
