@@ -20,7 +20,8 @@ def is_disarium(n):
     orignal = n
 
     for index, num in enumerate(str(n), start=1):
-        sum += int(num)**int(index)
+        # sum += int(num)**int(index)
+        sum = sum + int(num)**int(index)
         # sum += math.pow(num, index)
 
     if orignal == sum:
