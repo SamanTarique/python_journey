@@ -5,9 +5,7 @@
 # with open('with.txt', 'r') as file:
 #     print(file.read())
 
-with open(
-    "/home/developer/projects/python/with.txt", 'r+'
-        ) as file:
+with open("/home/developer/projects/python/with.txt", "r+") as file:
     print(file.read())
     print(file.readline())
     print(file.readlines())
