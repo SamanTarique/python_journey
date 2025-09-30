@@ -9,8 +9,10 @@
 
 def uncensor(string, vowel):
 
-    print(string.split(""))
-    # print(string)
+    # print(string.split(""))
+
+    for i in len(vowel):
+        string.replace()
 
 
 print(uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo"))
