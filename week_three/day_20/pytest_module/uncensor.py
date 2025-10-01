@@ -16,5 +16,3 @@ def uncensor(my_string, vowel):
 
 
 print(uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo"))
-print(uncensor("abcd", ""))
-print(uncensor("*PP*RC*S*", "UEAE"))
