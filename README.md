@@ -119,15 +119,8 @@ cd python_journey
 </p>
 
 
-
 ### 3️⃣ Create a new branch for your feature or fix:
 open git write  command
-
-## Clone your fork
-```bash
-git clone https://github.com/devAnurodh18/python_journey.git
-cd python_journey
-```
 
 ```bash
 git checkout -b feature/add-new-example
