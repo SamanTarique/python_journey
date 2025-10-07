@@ -98,6 +98,10 @@ This is an **open-source repository**. Contributors are welcome to join, includi
 ### 1️⃣ Fork the Repository
 ![Fork Icon](https://img.icons8.com/ios-glyphs/30/github.png)  
 Click the **Fork** button on the top-right of the repository page.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SamanTarique/python_journey/refs/heads/master/Fork-a-GitHub-Repository.webp" alt="Fork Step" width="600">
+</p>
+
 
 ---
 
