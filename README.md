@@ -115,12 +115,18 @@ cd python_journey
 
 ```
 <p align="center">
+  <img src="https://raw.githubusercontent.com/SamanTarique/python_journey/refs/heads/master/https-url-clone-cli.png" alt="HTTPS URL Clone Command" width="600">
+</p>
+
+---
+ ## open git write  command:
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/SamanTarique/python_journey/refs/heads/master/Screenshot%202025-10-07%20040527.png" alt="Step Screenshot" width="600">
 </p>
 
 
 ### 3️⃣ Create a new branch for your feature or fix:
-open git write  command
 
 ```bash
 git checkout -b feature/add-new-example
@@ -132,6 +138,9 @@ git checkout -b feature/add-new-example
 git add .
 git commit -m "Describe your changes"
 ```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SamanTarique/python_journey/refs/heads/master/Screenshot%202025-10-07%20040747.png" alt="Clone Command in CLI" width="600">
+</p>
 
 
 ### 5️⃣ Push Branch
