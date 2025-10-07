@@ -97,11 +97,12 @@ This is an **open-source repository**. Contributors are welcome to join, includi
 
 ### 1️⃣ Fork the Repository
 ![Fork Icon](https://img.icons8.com/ios-glyphs/30/github.png)  
+```bash
 Click the **Fork** button on the top-right of the repository page.
 <p align="center">
   <img src="https://raw.githubusercontent.com/SamanTarique/python_journey/refs/heads/master/Fork-a-GitHub-Repository.webp" alt="Fork Step" width="600">
 </p>
-
+````
 
 ---
 
@@ -110,7 +111,13 @@ Click the **Fork** button on the top-right of the repository page.
 ```bash
 git clone https://github.com/devAnurodh18/python_journey.git
 cd python_journey
+
 ```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SamanTarique/python_journey/refs/heads/master/Screenshot%202025-10-07%20040527.png" alt="Step Screenshot" width="600">
+</p>
+
+
 
 ### 3️⃣ Create a new branch for your feature or fix:
 open git write  command
