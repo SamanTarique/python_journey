@@ -108,6 +108,7 @@ Click the **Fork** button on the top-right of the repository page.
 ---
 
 ### 2️⃣ Clone Your Fork
+
 ![Clone Icon](https://img.icons8.com/ios-glyphs/30/download.png)  
 ```bash
 git clone https://github.com/devAnurodh18/python_journey.git
@@ -131,6 +132,9 @@ cd python_journey
 ```bash
 git checkout -b feature/add-new-example
 ```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SamanTarique/python_journey/refs/heads/master/Screenshot%202025-10-07%20040747.png" alt="Clone Command in CLI" width="600">
+</p>
 
 ### 4️⃣ Make Changes & Commit
 
@@ -138,17 +142,16 @@ git checkout -b feature/add-new-example
 git add .
 git commit -m "Describe your changes"
 ```
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SamanTarique/python_journey/refs/heads/master/Screenshot%202025-10-07%20040747.png" alt="Clone Command in CLI" width="600">
-</p>
 
 
 ### 5️⃣ Push Branch
+
 ```bash
 git push origin feature/add-new-example
 ```
 
 ### 6️⃣ Open Pull Request
+
 Go to your fork on GitHub → Click Compare & Pull Request → Submit.
 
 
@@ -173,8 +176,8 @@ Go to your fork on GitHub → Click Compare & Pull Request → Submit.
 
 ### 💡 Contributor’s Note:
 
-“Learning Python becomes powerful when logic meets collaboration.
-This repository is a place to explore, create, and contribute with clarity and curiosity.”
-— Saman Tariq
+> “Learning Python becomes powerful when logic meets collaboration.  
+> This repository is a place to explore, create, and contribute with clarity and curiosity.”  
+> — *Saman Tariq*
 
 #  Happy Journey & Happy Coding! 💻
